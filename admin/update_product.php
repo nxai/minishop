@@ -1,5 +1,7 @@
 <?php
-require_once './condb.php';
+require_once '../config/auth.php'; //ກວດເຊັກການລ໋ອກອິນ
+require_once '../config/condb.php'; //ເຊື່ອມຕໍ່ຖານຂໍ້ມູນ
+
 
 if(isset($_POST['btn_update'])){
 //ຮັບຄ່າຈາກຟອມ ມາເກັບໃນຕົວປ່ຽນ
@@ -50,7 +52,7 @@ try {
     if($stmt->execute()){
         echo "<script>
         alert('ບັນທຶກຂໍ້ມູນສຳເລັດ!');
-        window.location='index.php';
+        window.location='product.php';
             </script>";
     }else{
         echo "<script>

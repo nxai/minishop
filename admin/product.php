@@ -1,10 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION['user_id'])){
-    header("Location: login.php");
-    exit();
-}
-require_once './condb.php'; //ເຊື່ອມຕໍ່ຖານຂໍ້ມູນ
+require_once '../config/auth.php'; //ກວດເຊັກການລ໋ອກອິນ
+require_once '../config/condb.php'; //ເຊື່ອມຕໍ່ຖານຂໍ້ມູນ
 ?>
 <!doctype html>
 <html lang="en">

@@ -1,10 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION['user_id'])){
-    header("Location: login.php");
-    exit();
-}
-require_once './condb.php'; //ເຊື່ອມຕໍ່ຖານຂໍ້ມູນ
+require_once '../config/auth.php'; //ກວດເຊັກການລ໋ອກອິນ
+require_once '../config/condb.php'; //ເຊື່ອມຕໍ່ຖານຂໍ້ມູນ
 
 //ກວດສອບວ່າ ມີການສົ່ງ ID ມາຫຼືບໍ່
 // echo $_GET['id'];
@@ -28,7 +24,7 @@ if(isset($_GET['id'])){
     if($stmt->execute()){
         echo "<script>
         alert('ລຶບຂໍ້ມູນສຳເລັດ!');
-        window.location='index.php';
+        window.location='product.php';
             </script>";
     }else{
         echo "<script>
@@ -39,7 +35,7 @@ if(isset($_GET['id'])){
     echo "ເກິດຂໍ້ຜິດພາດ".$e->getMessage();
   }
 }else {
-    header("Location: index.php");
+    header("Location: product.php");
     exit();
 }
 ?>

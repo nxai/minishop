@@ -1,6 +1,6 @@
 <?php
 session_start();
-  require_once './condb.php';//ເຊື່ອມຕໍ່ຖານຂໍ້ມູນ
+  require_once '../config/condb.php';//ເຊື່ອມຕໍ່ຖານຂໍ້ມູນ
 
   if($_SERVER["REQUEST_METHOD"]== "POST"){
         $username = $_POST['username'];
@@ -15,8 +15,12 @@ session_start();
             $_SESSION['username'] = $user_data['username'];
             $_SESSION['role'] = $user_data['role'];
 
-            header("Location: dashboard.php");
+            if($user_data['role'] == 'admin'){
+                header("Location: ../admin/dashboard.php");
             exit();
+            }else {
+                header("Location: ../index.php");
+            } 
         }else{
             echo "username & Password Wrong!";
         }

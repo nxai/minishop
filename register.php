@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>ຟອມລົງທະບຽນ</h2>
-    <form action="register_process.php" method="post">
+    <form action="./functions/register_process.php" method="post">
         Fullname: <br>
         <input type="text" name="fullname" required><br>
         Username: <br>

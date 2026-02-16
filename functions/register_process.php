@@ -1,5 +1,5 @@
 <?php
-  require_once './condb.php';//ເຊື່ອມຕໍ່ຖານຂໍ້ມູນ
+  require_once '../config/condb.php';//ເຊື່ອມຕໍ່ຖານຂໍ້ມູນ
   if($_SERVER["REQUEST_METHOD"]== "POST"){
         $fullname = $_POST['fullname'];
         $username = $_POST['username'];

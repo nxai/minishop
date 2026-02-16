@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>ເຂົ້າສູ່ລະບົບ</h2>
-    <form action="login_process.php" method="post">
+    <form action="./functions/login_process.php" method="post">
         Username: <br>
         <input type="text" name="username" required><br>
         Password: <br>
